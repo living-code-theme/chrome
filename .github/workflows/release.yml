@@ -1,0 +1,27 @@
+# Tags are created by the maintainer. This workflow never creates or moves a tag.
+name: release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - uses: pnpm/action-setup@v4
+      - name: Check the release version
+        run: |
+          version="$(node -p "JSON.parse(require('fs').readFileSync('package.json')).version")"
+          test "$GITHUB_REF_NAME" = "v$version" || { echo "Tag must match package.json version" >&2; exit 1; }
+      - run: node scripts/check.mjs
+      - run: node scripts/package.mjs
+      - name: Create release with the packaged files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes dist/*

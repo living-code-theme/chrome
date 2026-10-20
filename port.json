@@ -1,0 +1,39 @@
+{
+  "$schema": "https://living-code.dev/port.schema.json",
+  "schemaVersion": 1,
+  "name": "Chrome, Brave and Chromium",
+  "slug": "chrome",
+  "group": "Browsers",
+  "emoji": "🌐",
+  "description": "Living Code for Chrome, Brave and Chromium. Repository-owned theme files, installation instructions and Night and Paper.",
+  "homepage": "https://chromewebstore.google.com/category/themes",
+  "quick": "See installation instructions",
+  "aliases": [
+    "chrome"
+  ],
+  "flavors": [
+    "night",
+    "paper"
+  ],
+  "files": [
+    "OFL-JetBrainsMono.txt",
+    "living-code-night/icons/icon-128.png",
+    "living-code-night/icons/icon-48.png",
+    "living-code-night/manifest.json",
+    "living-code-paper/icons/icon-128.png",
+    "living-code-paper/icons/icon-48.png",
+    "living-code-paper/manifest.json"
+  ],
+  "images": [
+    {
+      "flavor": "night",
+      "path": "images/night.png",
+      "alt": "Chrome, Brave and Chromium running Living Code Night"
+    },
+    {
+      "flavor": "paper",
+      "path": "images/paper.png",
+      "alt": "Chrome, Brave and Chromium running Living Code Paper"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "manifest_version": 3,
+  "name": "Living Code Night",
+  "version": "0.1.0",
+  "description": "Living Code theme for Chrome. Calm slate. Living color. Dark slate ground, teal structure and gray comments. The default flavor.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "theme": {
+    "colors": {
+      "frame": [
+        2,
+        4,
+        5
+      ],
+      "frame_inactive": [
+        2,
+        4,
+        5
+      ],
+      "frame_incognito": [
+        2,
+        4,
+        5
+      ],
+      "frame_incognito_inactive": [
+        2,
+        4,
+        5
+      ],
+      "toolbar": [
+        5,
+        8,
+        11
+      ],
+      "tab_text": [
+        226,
+        233,
+        238
+      ],
+      "background_tab": [
+        2,
+        4,
+        5
+      ],
+      "tab_background_text": [
+        155,
+        160,
+        162
+      ],
+      "toolbar_text": [
+        226,
+        233,
+        238
+      ],
+      "bookmark_text": [
+        200,
+        207,
+        212
+      ],
+      "toolbar_button_icon": [
+        155,
+        160,
+        162
+      ],
+      "button_background": [
+        18,
+        23,
+        26
+      ],
+      "omnibox_background": [
+        2,
+        4,
+        5
+      ],
+      "omnibox_text": [
+        226,
+        233,
+        238
+      ],
+      "ntp_background": [
+        5,
+        8,
+        11
+      ],
+      "ntp_text": [
+        226,
+        233,
+        238
+      ],
+      "ntp_link": [
+        0,
+        166,
+        146
+      ]
+    },
+    "tints": {
+      "buttons": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "center"
+    }
+  }
+}

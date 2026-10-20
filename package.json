@@ -1,0 +1,26 @@
+{
+  "name": "living-code-chrome",
+  "version": "0.1.0",
+  "description": "Living Code for Chrome, Brave and Chromium. Repository-owned theme files, installation instructions and Night and Paper.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Living Code",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/living-code-theme/chrome.git"
+  },
+  "homepage": "https://github.com/living-code-theme/chrome",
+  "private": true,
+  "packageManager": "pnpm@12.9.0",
+  "engines": {
+    "node": ">=22.22"
+  },
+  "livingCode": {
+    "kind": "chrome"
+  },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "node scripts/check.mjs",
+    "package": "node scripts/package.mjs"
+  }
+}

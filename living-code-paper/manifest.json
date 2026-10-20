@@ -1,0 +1,109 @@
+{
+  "manifest_version": 3,
+  "name": "Living Code Paper",
+  "version": "0.1.0",
+  "description": "Living Code theme for Chrome. Calm slate. Living color. Warm light paper ground with teal structure. The light flavor.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "theme": {
+    "colors": {
+      "frame": [
+        224,
+        229,
+        233
+      ],
+      "frame_inactive": [
+        224,
+        229,
+        233
+      ],
+      "frame_incognito": [
+        224,
+        229,
+        233
+      ],
+      "frame_incognito_inactive": [
+        224,
+        229,
+        233
+      ],
+      "toolbar": [
+        244,
+        247,
+        249
+      ],
+      "tab_text": [
+        18,
+        23,
+        26
+      ],
+      "background_tab": [
+        224,
+        229,
+        233
+      ],
+      "tab_background_text": [
+        80,
+        86,
+        90
+      ],
+      "toolbar_text": [
+        18,
+        23,
+        26
+      ],
+      "bookmark_text": [
+        46,
+        52,
+        55
+      ],
+      "toolbar_button_icon": [
+        80,
+        86,
+        90
+      ],
+      "button_background": [
+        227,
+        233,
+        237
+      ],
+      "omnibox_background": [
+        224,
+        229,
+        233
+      ],
+      "omnibox_text": [
+        18,
+        23,
+        26
+      ],
+      "ntp_background": [
+        244,
+        247,
+        249
+      ],
+      "ntp_text": [
+        18,
+        23,
+        26
+      ],
+      "ntp_link": [
+        24,
+        125,
+        110
+      ]
+    },
+    "tints": {
+      "buttons": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "center"
+    }
+  }
+}
