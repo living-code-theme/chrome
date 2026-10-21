@@ -10,7 +10,9 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 24 }
       - uses: pnpm/action-setup@v4
-      - run: node scripts/check.mjs
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm test
       - run: node scripts/package.mjs
       - uses: actions/upload-artifact@v4
         with:

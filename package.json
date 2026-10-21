@@ -20,7 +20,10 @@
   },
   "scripts": {
     "check": "node scripts/check.mjs",
-    "test": "node scripts/check.mjs",
+    "test": "node scripts/check.mjs && node --test test/*.test.mjs",
+    "build": "node scripts/generate.mjs",
+    "check:generated": "node scripts/generate.mjs --check",
+    "palette:update": "node scripts/update-palette.mjs",
     "package": "node scripts/package.mjs"
   }
 }

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Port-owned, dependency-free checks. Landing discovery performs its own full schema/README/image validation.
 import assert from "node:assert/strict";
+import { generatePort } from "./generate.mjs";
 import { readFile, realpath, stat } from "node:fs/promises";
 import { isAbsolute, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -75,6 +76,7 @@ export async function check(directory = root) {
     }
   }
   for (const path of Object.values(pkg.exports ?? {})) if (typeof path === "string") await read(path.replace(/^\.\//, ""));
+  await generatePort({ directory: base, check: true });
   return { manifest, pkg };
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
