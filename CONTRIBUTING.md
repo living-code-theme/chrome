@@ -1,13 +1,15 @@
 # Maintaining this port
 
 This repository owns its application mappings, generator, tests and committed theme files. It does not depend on a
-core checkout during normal builds or installation. Requires Node 22.22+ and pnpm 12.9.0 for maintenance only.
+core checkout during normal builds or installation. Maintenance requires Node 22.22+, pnpm 12.9.0 and Python 3.
+Recapture uses the locked Nix environment; installing a theme needs none of these tools.
 
 ## Build and verify
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm build
+pnpm screenshots
 pnpm check
 pnpm test
 ```
@@ -30,6 +32,28 @@ and reviewed hashes. After an intentional SVG edit, run `node scripts/icons.mjs 
 Normal checks/packaging require no browser and never refresh artwork. Both generated browser manifest versions
 come from this port's `package.json`.
 
+## Capture and review the real browser
+
+`pnpm screenshots` loads the native theme into real Chromium on Xvfb at 2560×1600, natively rendered at 2×.
+It uses disposable profiles, English UI/Accept-Language settings and local English example tabs. Remote hosts are
+blocked so geolocated Google promotions cannot introduce Spanish or other unexpected text. The active page is
+Chromium's own New Tab page, not an HTML recreation. DevTools checks the native page's language and visible copy.
+
+- `pnpm screenshots -- --force`: deliberately refresh both flavors.
+- `pnpm screenshots -- --flavor paper`: preview one flavor in `dist/capture-preview/`, without changing published images.
+- `pnpm screenshots:check`: offline input/image fingerprint and native-resolution checks.
+- `pnpm screenshots:store`: create genuine downsampled **1280×800** upload copies in `dist/store/` from the verified
+  2560×1600 captures. It never recolors, reconstructs or recaptures UI.
+
+Review both flavors together. `images/capture.json` records the source/runtime pin, actual Chromium version,
+observed palette colors and PNG hashes; tests require the teal accent to appear in each real image. Checks and
+packaging reject stale captures without launching a browser. CI refreshes stale captures before validation and
+commits only validated `images/` changes on main. Release jobs consume the committed images; they never recapture.
+
+Do not invent unsupported Firefox-style theme keys to force Chrome's focus ring or New Tab controls to match.
+The public theme API still leaves some surfaces under browser control. Test color/contrast mappings and actual
+native output, not just JSON validity.
+
 ## Adopt a palette update explicitly
 
 In a reviewed [core](https://github.com/living-code-theme/core) checkout, run `pnpm build`, `pnpm check` and
@@ -38,6 +62,7 @@ In a reviewed [core](https://github.com/living-code-theme/core) checkout, run `p
 ```sh
 pnpm palette:update /path/to/core
 pnpm build
+pnpm screenshots
 pnpm check
 pnpm test
 ```

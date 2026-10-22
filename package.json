@@ -1,6 +1,6 @@
 {
   "name": "living-code-chrome",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Living Code Night and Paper themes for Chrome and Chromium browsers.",
   "type": "module",
   "license": "MIT",
@@ -23,6 +23,9 @@
     "test": "node scripts/check.mjs && node --test test/*.test.mjs",
     "build": "node scripts/generate.mjs",
     "check:generated": "node scripts/generate.mjs --check",
+    "screenshots": "nix develop path:./capture --command python3 scripts/capture.py",
+    "screenshots:check": "python3 scripts/capture.py --check",
+    "screenshots:store": "nix develop path:./capture --command node scripts/store-previews.mjs",
     "palette:update": "node scripts/update-palette.mjs",
     "package": "node scripts/package.mjs"
   }

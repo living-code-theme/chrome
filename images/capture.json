@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "scene": "Real Chromium at native 2x scale, with this flavor installed in an isolated English-only profile. The active page is Chromium's own New Tab page; inactive tabs are local English example documents. Remote hosts are blocked to prevent geographic promos or translated server content. No browser UI is reconstructed or recolored.",
+  "inputs": {
+    "OFL-JetBrainsMono.txt": "30f0c136e3c88e422d0791acd97238870f9054a9729bc34cf2ff0d4ed8cac4ad",
+    "capture/app.py": "1808f53d773657b766b78277e671fc8294bea5dae55801e280a20f2e591c7577",
+    "capture/config.json": "0ba3273f1703eaca33923ea2930777476839f2fb35f28bd1415a236517a4cd89",
+    "capture/fixtures/docs.html": "70a1bc768562d61551d556e6fb9995c71c01d19489361c9d336efaaf29072fb5",
+    "capture/fixtures/start.html": "95aee3d99ff04dee209b5b85263d2454b48d8414a6b087972fa3b3f32196e74e",
+    "capture/flake.lock": "e3750f7ba25d0b1971722cdd83b2f07e32528980a4d6a9a1ea55177747de5752",
+    "capture/flake.nix": "8d5ccaad3feacff888f6fd93e0c5d88b03232686e1f1db3ae79a9c6b12cb35cc",
+    "capture/inspect.mjs": "74b9863d43cb9b0acb9cdf5b36cb1e769f4b42715e09e5188b6d648e562f8994",
+    "living-code-night/icons/icon-128.png": "a498d716d9b78194863fbebd19b6a56e6c66823df26565ade8be232a3f6ea275",
+    "living-code-night/icons/icon-48.png": "aeed2aedbbdb5de99e04253d738edda0546795dc64654c5de2cb11b1b3c3b429",
+    "living-code-night/manifest.json": "0b2ca095e18bd9b3b85a5bb0d6a504c04fc1b26730f5eec45c045c585cc5f4a0",
+    "living-code-paper/icons/icon-128.png": "726172d092a86d604662d034b79d6a5f9ff6cc44931c92951643f14bdfdb6f43",
+    "living-code-paper/icons/icon-48.png": "4e60d1d476735f831be41cf800edc5d3e5749bbb1a623bc26f174f003a732552",
+    "living-code-paper/manifest.json": "d03ccc6271faf12a9d8edcfdd0781d101ea864a262242cbbc1996e30e7fbca8e",
+    "palette/theme.json": "01030162d8307cd9ea1fe91de4f9e78f62620f2f5e8785e268a2e480a9697561",
+    "port.json": "4f7b07876bbf63b3cb6e5f357c2e709b3796e3e7c61507677bc24807c2cd1d5b",
+    "scripts/capture.py": "1fefb763f00567b795b92388b29e3e8c3fd58bd0eefa9c2f31e43663cad7a308"
+  },
+  "images": {
+    "night": {
+      "path": "images/night.png",
+      "sha256": "ea6c395fe1d030137b5291e27b9001f3ce9b65e1f58d85bffb2c8d7c8cb1bb00",
+      "application": "Chromium 155.0.8059.39",
+      "paletteColors": [
+        "#00a692",
+        "#05080b",
+        "#c8cfd4",
+        "#e2e9ee"
+      ]
+    },
+    "paper": {
+      "path": "images/paper.png",
+      "sha256": "8e8e7935958e4d392938b36161d4f3e2136aa20a99c32e899cb060f97cb65272",
+      "application": "Chromium 155.0.8059.39",
+      "paletteColors": [
+        "#12171a",
+        "#187d6e",
+        "#2e3437",
+        "#f4f7f9"
+      ]
+    }
+  }
+}

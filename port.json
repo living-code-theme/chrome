@@ -5,7 +5,7 @@
   "slug": "chrome",
   "group": "Browsers",
   "emoji": "🌐",
-  "description": "Living Code for Chrome, Brave and Chromium. Repository-owned theme files, installation instructions and Night and Paper.",
+  "description": "Dark Night and light Paper themes with teal-tinted tabs and teal toolbar accents.",
   "homepage": "https://chromewebstore.google.com/category/themes",
   "quick": "See installation instructions",
   "aliases": [
@@ -28,12 +28,12 @@
     {
       "flavor": "night",
       "path": "images/night.png",
-      "alt": "Chrome, Brave and Chromium running Living Code Night"
+      "alt": "Real Chromium in English with Living Code Night: dark slate, teal tabs and toolbar icons"
     },
     {
       "flavor": "paper",
       "path": "images/paper.png",
-      "alt": "Chrome, Brave and Chromium running Living Code Paper"
+      "alt": "Real Chromium in English with Living Code Paper: light slate, teal tabs and toolbar icons"
     }
   ]
 }

@@ -20,6 +20,7 @@ jobs:
           version="$(node -p "JSON.parse(require('fs').readFileSync('package.json')).version")"
           test "$GITHUB_REF_NAME" = "v$version" || { echo "Tag must match package.json version" >&2; exit 1; }
       - run: node scripts/check.mjs
+      - run: node --test test/*.test.mjs
       - run: node scripts/package.mjs
       - name: Create release with the packaged files
         env:

@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "scene": "Real Chromium at native 2x scale, with this flavor installed in an isolated English-only profile. The active page is Chromium's own New Tab page; inactive tabs are local English example documents. Remote hosts are blocked to prevent geographic promos or translated server content. No browser UI is reconstructed or recolored.",
+  "versionCommand": ["chromium", "--version"],
+  "fixtures": ["capture/inspect.mjs", "capture/fixtures/start.html", "capture/fixtures/docs.html"]
+}

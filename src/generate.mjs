@@ -12,6 +12,11 @@ const rgbArray = (hex) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16)
 
 function chromeTheme(f) {
   const r = (role) => rgbArray(f.r(role));
+  // Chrome exposes a small, explicit theme API, not Firefox's field/focus colors.
+  // Give supported, visible controls an accent rather than relying on legacy ntp_link alone.
+  const frame = rgbArray(f.mix("bgDeep", "accent", 0.35));
+  const inactiveFrame = rgbArray(f.mix("bgDeep", "accent", 0.18));
+  const incognitoFrame = rgbArray(f.mix("bgDeep", "accent", 0.24));
   return {
     manifest_version: 3,
     name: f.name,
@@ -20,25 +25,31 @@ function chromeTheme(f) {
     icons: { "48": "icons/icon-48.png", "128": "icons/icon-128.png" },
     theme: {
       colors: {
-        frame: r("bgDeep"),
-        frame_inactive: r("bgDeep"),
-        frame_incognito: r("bgDeep"),
-        frame_incognito_inactive: r("bgDeep"),
+        frame,
+        frame_inactive: inactiveFrame,
+        frame_incognito: incognitoFrame,
+        frame_incognito_inactive: inactiveFrame,
         toolbar: r("bg"),
-        tab_text: r("fg"),
-        background_tab: r("bgDeep"),
-        tab_background_text: r("fgMuted"),
+        tab_text: r("accent"),
+        background_tab: frame,
+        background_tab_inactive: inactiveFrame,
+        background_tab_incognito: incognitoFrame,
+        background_tab_incognito_inactive: inactiveFrame,
+        tab_background_text: r("fgAlt"),
+        tab_background_text_inactive: r("fgMuted"),
+        tab_background_text_incognito: r("fgAlt"),
+        tab_background_text_incognito_inactive: r("fgMuted"),
         toolbar_text: r("fg"),
         bookmark_text: r("fgAlt"),
-        toolbar_button_icon: r("fgMuted"),
-        button_background: rgbArray(f.c("surface0")),
-        omnibox_background: r("bgDeep"),
+        toolbar_button_icon: r("accent"),
+        button_background: rgbArray(f.mix("surface0", "accent", 0.18)),
+        omnibox_background: rgbArray(f.mix("bg", "accent", 0.09)),
         omnibox_text: r("fg"),
         ntp_background: r("bg"),
         ntp_text: r("fg"),
         ntp_link: r("accent"),
+        ntp_header: r("accent"),
       },
-      tints: { buttons: [-1, -1, -1] },
       properties: { ntp_background_alignment: "center" },
     },
   };
