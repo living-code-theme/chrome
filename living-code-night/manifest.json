@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Living Code Night",
-  "version": "0.1.1",
-  "description": "Living Code theme for Chrome. Calm slate. Living color. Dark slate ground, teal structure and gray comments. The default flavor.",
+  "version": "0.1.2",
+  "description": "A calm, dark slate theme with teal accents.",
   "icons": {
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"

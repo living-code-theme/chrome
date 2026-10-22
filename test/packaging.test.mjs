@@ -37,6 +37,8 @@ with zipfile.ZipFile(sys.argv[1]) as outer:
       const manifest = JSON.parse(entries.get("manifest.json"));
       assert.equal(manifest.version, pkg.version);
       assert.ok(manifest.name.startsWith("Living Code "));
+      assert.ok(manifest.description.length > 0 && manifest.description.length <= 80, "Keep the package summary short; use the store's separate detailed-description field");
+      assert.doesNotMatch(manifest.description, /comments|syntax|editor|flavor/i, "Describe the browser theme, not editor syntax or internal terminology");
       for (const path of Object.values(manifest.icons)) assert.ok(entries.has(path));
     }
   }

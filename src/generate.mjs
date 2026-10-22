@@ -2,14 +2,11 @@
 import { readFileSync } from "node:fs";
 const version = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8")).version;
 
+// Short manifest/store summaries. Detailed listing copy is entered separately in the Web Store.
 const CHROME_DESCRIPTIONS = {
-  night: "Dark slate ground, teal structure and gray comments. The default flavor.",
-  paper: "Warm light paper ground with teal structure. The light flavor.",
+  night: "A calm, dark slate theme with teal accents.",
+  paper: "A clean, light theme with teal accents.",
 };
-
-const SLOGAN = "Calm slate. Living color.";
-
-const storeIntro = (app) => `Living Code theme for ${app}. ${SLOGAN}`;
 
 const rgbArray = (hex) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
 
@@ -19,7 +16,7 @@ function chromeTheme(f) {
     manifest_version: 3,
     name: f.name,
     version,
-    description: `${storeIntro("Chrome")} ${CHROME_DESCRIPTIONS[f.id]}`,
+    description: CHROME_DESCRIPTIONS[f.id],
     icons: { "48": "icons/icon-48.png", "128": "icons/icon-128.png" },
     theme: {
       colors: {

@@ -1,7 +1,7 @@
 {
   "name": "living-code-chrome",
-  "version": "0.1.1",
-  "description": "Living Code for Chrome, Brave and Chromium. Repository-owned theme files, installation instructions and Night and Paper.",
+  "version": "0.1.2",
+  "description": "Living Code Night and Paper themes for Chrome and Chromium browsers.",
   "type": "module",
   "license": "MIT",
   "author": "Living Code",
