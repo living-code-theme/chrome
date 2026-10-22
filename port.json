@@ -5,7 +5,7 @@
   "slug": "chrome",
   "group": "Browsers",
   "emoji": "🌐",
-  "description": "Dark Night and light Paper themes with teal-tinted tabs and teal toolbar accents.",
+  "description": "Dark Night and light Paper themes with neutral slate surfaces and restrained teal accents.",
   "homepage": "https://chromewebstore.google.com/category/themes",
   "quick": "See installation instructions",
   "aliases": [
@@ -28,12 +28,12 @@
     {
       "flavor": "night",
       "path": "images/night.png",
-      "alt": "Real Chromium in English with Living Code Night: dark slate, teal tabs and toolbar icons"
+      "alt": "Real Chromium in English with Living Code Night: dark slate surfaces and a small teal active-tab accent"
     },
     {
       "flavor": "paper",
       "path": "images/paper.png",
-      "alt": "Real Chromium in English with Living Code Paper: light slate, teal tabs and toolbar icons"
+      "alt": "Real Chromium in English with Living Code Paper: light slate surfaces and a small teal active-tab accent"
     }
   ]
 }

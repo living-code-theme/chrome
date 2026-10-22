@@ -19,11 +19,21 @@ const files = generate(resolveAll());
 
 for (const flavor of resolveAll().filter((f) => ["night", "paper"].includes(f.id))) {
   const colors = JSON.parse(files.find((file) => file.path === `${flavor.slug}/manifest.json`).content).theme.colors;
-  test(`${flavor.id}: visible controls use teal rather than relying on legacy New Tab links`, () => {
-    assert.deepEqual(colors.toolbar_button_icon, rgb(flavor.r("accent")));
-    assert.deepEqual(colors.tab_text, rgb(flavor.r("accent")));
-    assert.notDeepEqual(colors.frame, rgb(flavor.r("bgDeep")));
-    assert.ok(colors.frame[1] > colors.frame[0], "The tab strip must have a visible teal tint");
+  test(`${flavor.id}: Firefox-style neutral surfaces with teal confined to small accents`, () => {
+    // Keep this port independent of a sibling checkout: assert the shared design roles, not its files.
+    for (const name of ["frame", "frame_inactive", "frame_incognito", "frame_incognito_inactive",
+      "background_tab", "background_tab_inactive", "background_tab_incognito", "background_tab_incognito_inactive",
+      "omnibox_background"]) {
+      assert.deepEqual(colors[name], rgb(flavor.r("bgDeep")), `${name} must stay neutral, without an accent mix`);
+    }
+    assert.deepEqual(colors.toolbar, rgb(flavor.r("bg")));
+    assert.deepEqual(colors.ntp_background, rgb(flavor.r("bg")));
+    assert.deepEqual(colors.button_background, rgb(flavor.c("surface0")));
+    assert.deepEqual(colors.toolbar_button_icon, rgb(flavor.r("fgMuted")));
+    assert.deepEqual(colors.tab_background_text, rgb(flavor.r("fgMuted")));
+    const accentKeys = Object.entries(colors).filter(([, value]) => JSON.stringify(value) === JSON.stringify(rgb(flavor.r("accent"))))
+      .map(([name]) => name).sort();
+    assert.deepEqual(accentKeys, ["ntp_link", "tab_text"], "Only links and small active-tab details use teal");
     for (const [name, value] of Object.entries(colors)) {
       assert.ok(supported.has(name), `Unsupported Chrome theme color: ${name}`);
       assert.ok(value.length === 3 && value.every((n) => Number.isInteger(n) && n >= 0 && n <= 255));

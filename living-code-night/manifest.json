@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Living Code Night",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A calm, dark slate theme with teal accents.",
   "icons": {
     "48": "icons/icon-48.png",
@@ -10,24 +10,24 @@
   "theme": {
     "colors": {
       "frame": [
-        0,
-        52,
-        48
+        2,
+        4,
+        5
       ],
       "frame_inactive": [
         2,
-        26,
-        26
+        4,
+        5
       ],
       "frame_incognito": [
-        0,
-        35,
-        33
+        2,
+        4,
+        5
       ],
       "frame_incognito_inactive": [
         2,
-        26,
-        26
+        4,
+        5
       ],
       "toolbar": [
         5,
@@ -40,29 +40,29 @@
         146
       ],
       "background_tab": [
-        0,
-        52,
-        48
+        2,
+        4,
+        5
       ],
       "background_tab_inactive": [
         2,
-        26,
-        26
+        4,
+        5
       ],
       "background_tab_incognito": [
-        0,
-        35,
-        33
+        2,
+        4,
+        5
       ],
       "background_tab_incognito_inactive": [
         2,
-        26,
-        26
+        4,
+        5
       ],
       "tab_background_text": [
-        200,
-        207,
-        212
+        155,
+        160,
+        162
       ],
       "tab_background_text_inactive": [
         155,
@@ -70,9 +70,9 @@
         162
       ],
       "tab_background_text_incognito": [
-        200,
-        207,
-        212
+        155,
+        160,
+        162
       ],
       "tab_background_text_incognito_inactive": [
         155,
@@ -90,19 +90,19 @@
         212
       ],
       "toolbar_button_icon": [
-        0,
-        166,
-        146
+        155,
+        160,
+        162
       ],
       "button_background": [
-        20,
-        46,
-        45
+        18,
+        23,
+        26
       ],
       "omnibox_background": [
-        6,
-        19,
-        21
+        2,
+        4,
+        5
       ],
       "omnibox_text": [
         226,
@@ -125,9 +125,9 @@
         146
       ],
       "ntp_header": [
-        0,
-        166,
-        146
+        200,
+        207,
+        212
       ]
     },
     "properties": {

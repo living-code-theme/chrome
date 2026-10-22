@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Living Code Paper",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A clean, light theme with teal accents.",
   "icons": {
     "48": "icons/icon-48.png",
@@ -10,24 +10,24 @@
   "theme": {
     "colors": {
       "frame": [
-        161,
-        192,
-        188
+        224,
+        229,
+        233
       ],
       "frame_inactive": [
-        191,
-        210,
-        210
+        224,
+        229,
+        233
       ],
       "frame_incognito": [
-        180,
-        204,
-        202
+        224,
+        229,
+        233
       ],
       "frame_incognito_inactive": [
-        191,
-        210,
-        210
+        224,
+        229,
+        233
       ],
       "toolbar": [
         244,
@@ -40,29 +40,29 @@
         110
       ],
       "background_tab": [
-        161,
-        192,
-        188
+        224,
+        229,
+        233
       ],
       "background_tab_inactive": [
-        191,
-        210,
-        210
+        224,
+        229,
+        233
       ],
       "background_tab_incognito": [
-        180,
-        204,
-        202
+        224,
+        229,
+        233
       ],
       "background_tab_incognito_inactive": [
-        191,
-        210,
-        210
+        224,
+        229,
+        233
       ],
       "tab_background_text": [
-        46,
-        52,
-        55
+        80,
+        86,
+        90
       ],
       "tab_background_text_inactive": [
         80,
@@ -70,9 +70,9 @@
         90
       ],
       "tab_background_text_incognito": [
-        46,
-        52,
-        55
+        80,
+        86,
+        90
       ],
       "tab_background_text_incognito_inactive": [
         80,
@@ -90,19 +90,19 @@
         55
       ],
       "toolbar_button_icon": [
-        24,
-        125,
-        110
+        80,
+        86,
+        90
       ],
       "button_background": [
-        194,
-        213,
-        213
+        227,
+        233,
+        237
       ],
       "omnibox_background": [
-        226,
-        236,
-        236
+        224,
+        229,
+        233
       ],
       "omnibox_text": [
         18,
@@ -125,9 +125,9 @@
         110
       ],
       "ntp_header": [
-        24,
-        125,
-        110
+        46,
+        52,
+        55
       ]
     },
     "properties": {

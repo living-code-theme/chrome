@@ -5,7 +5,7 @@
 
 # 🌐 Living Code for Chrome, Brave and Chromium
 
-**Calm slate. Living color.**<br>Dark Night and light Paper themes with teal-tinted tabs and teal toolbar accents.
+**Calm slate. Living color.**<br>Dark Night and light Paper themes with neutral slate surfaces and restrained teal accents.
 
 <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/00a692.svg" width="14" height="14" alt="teal #00a692"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/52d7c1.svg" width="14" height="14" alt="mint #52d7c1"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/9ae0dd.svg" width="14" height="14" alt="aqua #9ae0dd"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/80b6d3.svg" width="14" height="14" alt="steel #80b6d3"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/8acb83.svg" width="14" height="14" alt="moss #8acb83"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/f0be6d.svg" width="14" height="14" alt="amber #f0be6d"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/e18c5f.svg" width="14" height="14" alt="copper #e18c5f"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/e96560.svg" width="14" height="14" alt="flare #e96560"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/bf91cd.svg" width="14" height="14" alt="orchid #bf91cd"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/ddaec3.svg" width="14" height="14" alt="rose #ddaec3">
 
@@ -23,12 +23,12 @@
 <table data-lc-flavors>
 <tr>
 <td width="50%" valign="top">
-<strong>Night</strong><br><sub>Dark · teal-accented slate</sub><br><br>
-<a href="images/night.png"><img src="images/night.png" alt="Real Chromium in English with Living Code Night: dark slate, teal tabs and toolbar icons" width="640"></a>
+<strong>Night</strong><br><sub>Dark · neutral slate</sub><br><br>
+<a href="images/night.png"><img src="images/night.png" alt="Real Chromium in English with Living Code Night: dark slate surfaces and a small teal active-tab accent" width="640"></a>
 </td>
 <td width="50%" valign="top">
 <strong>Paper</strong><br><sub>Light · near-white slate</sub><br><br>
-<a href="images/paper.png"><img src="images/paper.png" alt="Real Chromium in English with Living Code Paper: light slate, teal tabs and toolbar icons" width="640"></a>
+<a href="images/paper.png"><img src="images/paper.png" alt="Real Chromium in English with Living Code Paper: light slate surfaces and a small teal active-tab accent" width="640"></a>
 </td>
 </tr>
 </table>
@@ -51,9 +51,9 @@ To switch themes, install the other one, or use **Settings → Appearance → Re
 Expand a flavor for its full-size preview and activation instructions.
 
 <details data-lc-flavor="night">
-<summary><strong>Night</strong> · Dark · teal-accented slate</summary>
+<summary><strong>Night</strong> · Dark · neutral slate</summary>
 
-<p><a href="images/night.png"><img src="images/night.png" alt="Real Chromium in English with Living Code Night: dark slate, teal tabs and toolbar icons" width="1280"></a></p>
+<p><a href="images/night.png"><img src="images/night.png" alt="Real Chromium in English with Living Code Night: dark slate surfaces and a small teal active-tab accent" width="1280"></a></p>
 
 Load the `living-code-night` folder using *chrome://extensions → Developer mode → Load unpacked*, or the matching store theme when listed.
 
@@ -62,7 +62,7 @@ Load the `living-code-night` folder using *chrome://extensions → Developer mod
 <details data-lc-flavor="paper">
 <summary><strong>Paper</strong> · Light · near-white slate</summary>
 
-<p><a href="images/paper.png"><img src="images/paper.png" alt="Real Chromium in English with Living Code Paper: light slate, teal tabs and toolbar icons" width="1280"></a></p>
+<p><a href="images/paper.png"><img src="images/paper.png" alt="Real Chromium in English with Living Code Paper: light slate surfaces and a small teal active-tab accent" width="1280"></a></p>
 
 Load the `living-code-paper` folder using *chrome://extensions → Developer mode → Load unpacked*, or the matching store theme when listed.
 
@@ -70,12 +70,14 @@ Load the `living-code-paper` folder using *chrome://extensions → Developer mod
 
 ## Configuration
 
-Teal appears on the tab strip, toolbar icons and supported active-tab details. Night keeps the browsing surface
-dark; Paper keeps it near-white. Active, inactive and incognito tab-strip mappings are defined separately.
+Neutral slate tab strips, toolbar surfaces and navigation icons follow the Firefox port's surface hierarchy.
+Teal is limited to small active-tab details and supported New Tab links, rather than tinting whole surfaces.
+Night stays dark; Paper stays near-white.
 
-Chrome controls some UI independently of extension themes: focus rings, profile buttons and parts of its New Tab
-search/customization UI may retain browser-selected colors. A theme does not recolor websites or change your
-browser's language. Brave and other Chromium versions may apply these mappings differently.
+Chrome's theme API does not expose Firefox's tab-outline or address-field focus-border colors. Chrome also
+controls profile buttons and parts of its New Tab search/customization UI independently. A theme does not
+recolor websites or change your browser's language. Brave and other Chromium versions may apply these mappings
+differently.
 
 Use the activation instructions above and keep your other application configuration.
 

@@ -12,34 +12,37 @@
     "capture/inspect.mjs": "74b9863d43cb9b0acb9cdf5b36cb1e769f4b42715e09e5188b6d648e562f8994",
     "living-code-night/icons/icon-128.png": "a498d716d9b78194863fbebd19b6a56e6c66823df26565ade8be232a3f6ea275",
     "living-code-night/icons/icon-48.png": "aeed2aedbbdb5de99e04253d738edda0546795dc64654c5de2cb11b1b3c3b429",
-    "living-code-night/manifest.json": "0b2ca095e18bd9b3b85a5bb0d6a504c04fc1b26730f5eec45c045c585cc5f4a0",
+    "living-code-night/manifest.json": "b830a68e9f2eb988b1bffcb84b4232422b33713a87388128faf1187b25c44a54",
     "living-code-paper/icons/icon-128.png": "726172d092a86d604662d034b79d6a5f9ff6cc44931c92951643f14bdfdb6f43",
     "living-code-paper/icons/icon-48.png": "4e60d1d476735f831be41cf800edc5d3e5749bbb1a623bc26f174f003a732552",
-    "living-code-paper/manifest.json": "d03ccc6271faf12a9d8edcfdd0781d101ea864a262242cbbc1996e30e7fbca8e",
+    "living-code-paper/manifest.json": "3349833b3cbae8fcced7954f44188706104a14972b7b7aaa7dda16550a2b9fd6",
     "palette/theme.json": "01030162d8307cd9ea1fe91de4f9e78f62620f2f5e8785e268a2e480a9697561",
-    "port.json": "4f7b07876bbf63b3cb6e5f357c2e709b3796e3e7c61507677bc24807c2cd1d5b",
+    "port.json": "a1bda994cea62ac797d3121a7849b2dfde95620a569ab56b8ca83d662bbb64d9",
     "scripts/capture.py": "1fefb763f00567b795b92388b29e3e8c3fd58bd0eefa9c2f31e43663cad7a308"
   },
   "images": {
     "night": {
       "path": "images/night.png",
-      "sha256": "ea6c395fe1d030137b5291e27b9001f3ce9b65e1f58d85bffb2c8d7c8cb1bb00",
+      "sha256": "dbdb81d9cd920aced15052c7f152c48022b62ad675a23971d9d0948f1fd2d2b7",
       "application": "Chromium 155.0.8059.39",
       "paletteColors": [
         "#00a692",
+        "#020405",
         "#05080b",
-        "#c8cfd4",
+        "#9ba0a2",
         "#e2e9ee"
       ]
     },
     "paper": {
       "path": "images/paper.png",
-      "sha256": "8e8e7935958e4d392938b36161d4f3e2136aa20a99c32e899cb060f97cb65272",
+      "sha256": "8bf3e5ec449cb05c888e50d02703515daf17db982671718a9d766f7070c61e45",
       "application": "Chromium 155.0.8059.39",
       "paletteColors": [
         "#12171a",
         "#187d6e",
-        "#2e3437",
+        "#50565a",
+        "#e0e5e9",
+        "#ebeff2",
         "#f4f7f9"
       ]
     }
