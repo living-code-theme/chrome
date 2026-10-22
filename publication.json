@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "artifacts": ["living-code-chrome-night.zip", "living-code-chrome-paper.zip"],
+  "channels": [
+    { "name": "Chrome Web Store", "url": "https://chrome.google.com/webstore/devconsole/", "instructions": "Use a Living Code developer identity. Submit Night and Paper as separate theme listings, with the corresponding ZIP and native screenshots from images/. Complete developer registration, store metadata and review. Check for existing/pending items before creating duplicates. These listings also serve compatible Chromium browsers." }
+  ]
+}
