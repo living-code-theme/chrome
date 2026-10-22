@@ -2,6 +2,7 @@
 // Port-owned, dependency-free checks. Landing discovery performs its own full schema/README/image validation.
 import assert from "node:assert/strict";
 import { generatePort } from "./generate.mjs";
+import { checkIcons } from "./icons.mjs";
 import { readFile, realpath, stat } from "node:fs/promises";
 import { isAbsolute, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -22,6 +23,7 @@ export async function check(directory = root) {
   };
   const manifest = JSON.parse(await read("port.json", 32 * 1024));
   const pkg = JSON.parse(await read("package.json"));
+  await checkIcons(read);
   assert.equal(manifest.schemaVersion, 1);
   assert.ok(manifest.name && manifest.group && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(manifest.slug));
   assert.ok(manifest.flavors.length && new Set(manifest.flavors).size === manifest.flavors.length && manifest.flavors.every((id) => order.includes(id)));
@@ -72,6 +74,7 @@ export async function check(directory = root) {
   if (["firefox", "chrome"].includes(pkg.livingCode.kind)) {
     for (const flavor of manifest.flavors) {
       const browser = JSON.parse(await read(`living-code-${flavor}/manifest.json`));
+      assert.equal(browser.version, pkg.version, "Keep browser manifest and package versions in sync");
       for (const icon of Object.values(browser.icons)) await read(`living-code-${flavor}/${icon}`);
     }
   }

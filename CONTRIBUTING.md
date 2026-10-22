@@ -24,6 +24,12 @@ pnpm test
 README, metadata, marketplace identities, licenses, icons, screenshots, handwritten runtime files and publishing
 workflows are not generated. Packaging uses committed files and refuses stale generated themes; it does not rebuild.
 
+Marketplace icons draw the current `[lc]` lettermark. `node scripts/icons.mjs` checks both flavor SVGs, PNG sizes
+and reviewed hashes. After an intentional SVG edit, run `node scripts/icons.mjs --write` with Chromium installed
+(`CHROME_BIN` overrides `google-chrome`), then visually review every size and `scripts/icon-sources.json`.
+Normal checks/packaging require no browser and never refresh artwork. Both generated browser manifest versions
+come from this port's `package.json`.
+
 ## Adopt a palette update explicitly
 
 In a reviewed [core](https://github.com/living-code-theme/core) checkout, run `pnpm build`, `pnpm check` and

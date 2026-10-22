@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Living Code Paper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Living Code theme for Chrome. Calm slate. Living color. Warm light paper ground with teal structure. The light flavor.",
   "icons": {
     "48": "icons/icon-48.png",

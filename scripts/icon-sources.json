@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "icons": [
+    {
+      "source": "living-code-night/icons/icon.svg",
+      "sha256": "169c8a86ca9852bb5181330da2656d5a538a8bcc1a2c32245fb3f6b4cc1953dd",
+      "outputs": [
+        {
+          "path": "living-code-night/icons/icon-48.png",
+          "size": 48,
+          "sha256": "aeed2aedbbdb5de99e04253d738edda0546795dc64654c5de2cb11b1b3c3b429"
+        },
+        {
+          "path": "living-code-night/icons/icon-128.png",
+          "size": 128,
+          "sha256": "a498d716d9b78194863fbebd19b6a56e6c66823df26565ade8be232a3f6ea275"
+        }
+      ]
+    },
+    {
+      "source": "living-code-paper/icons/icon.svg",
+      "sha256": "d3649d0cf8005365fe2f2243bcd0a49d2273cd8ee861f14f53c5f1d907fb4ae2",
+      "outputs": [
+        {
+          "path": "living-code-paper/icons/icon-48.png",
+          "size": 48,
+          "sha256": "4e60d1d476735f831be41cf800edc5d3e5749bbb1a623bc26f174f003a732552"
+        },
+        {
+          "path": "living-code-paper/icons/icon-128.png",
+          "size": 128,
+          "sha256": "726172d092a86d604662d034b79d6a5f9ff6cc44931c92951643f14bdfdb6f43"
+        }
+      ]
+    }
+  ]
+}

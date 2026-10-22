@@ -1,5 +1,6 @@
-// This port owns its application mappings. Inputs come only from the pinned local palette.
-
+// This port owns its application mappings. Colors come only from the pinned local palette.
+import { readFileSync } from "node:fs";
+const version = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8")).version;
 
 const CHROME_DESCRIPTIONS = {
   night: "Dark slate ground, teal structure and gray comments. The default flavor.",
@@ -17,7 +18,7 @@ function chromeTheme(f) {
   return {
     manifest_version: 3,
     name: f.name,
-    version: "0.1.0",
+    version,
     description: `${storeIntro("Chrome")} ${CHROME_DESCRIPTIONS[f.id]}`,
     icons: { "48": "icons/icon-48.png", "128": "icons/icon-128.png" },
     theme: {
