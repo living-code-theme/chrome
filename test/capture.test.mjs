@@ -17,6 +17,17 @@ test("every supported flavor has a current native 2x screenshot that actually co
   }
 });
 
+test("exported previews preserve the native 2560×1600 PNG bytes", async () => {
+  execFileSync(process.execPath, ["scripts/store-previews.mjs"], { cwd: root });
+  for (const flavor of ["night", "paper"]) {
+    const source = await readFile(new URL(`../images/${flavor}.png`, import.meta.url));
+    const exported = await readFile(new URL(`../dist/store/living-code-chrome-${flavor}.png`, import.meta.url));
+    assert.equal(exported.readUInt32BE(16), 2560);
+    assert.equal(exported.readUInt32BE(20), 1600);
+    assert.deepEqual(exported, source, "Don't publish smaller or recompressed port images");
+  }
+});
+
 test("capture isolates English UI and blocks location-dependent remote New Tab promotions", async () => {
   const app = await read("capture/app.py"), inspect = await read("capture/inspect.mjs");
   assert.ok(app.includes("--lang=en-US") && app.includes("--accept-lang=en-US,en"));

@@ -42,8 +42,8 @@ Chromium's own New Tab page, not an HTML recreation. DevTools checks the native 
 - `pnpm screenshots -- --force`: deliberately refresh both flavors.
 - `pnpm screenshots -- --flavor paper`: preview one flavor in `dist/capture-preview/`, without changing published images.
 - `pnpm screenshots:check`: offline input/image fingerprint and native-resolution checks.
-- `pnpm screenshots:store`: create genuine downsampled **1280×800** upload copies in `dist/store/` from the verified
-  2560×1600 captures. It never recolors, reconstructs or recaptures UI.
+- `pnpm screenshots:store`: export the verified **2560×1600** port images byte-for-byte to `dist/store/`.
+  It never resizes, recolors, reconstructs or recaptures UI. All published port previews retain native resolution.
 
 Review both flavors together. `images/capture.json` records the source/runtime pin, actual Chromium version,
 observed palette colors and PNG hashes; tests require the teal accent to appear in each real image. Checks and

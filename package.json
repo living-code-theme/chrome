@@ -25,7 +25,7 @@
     "check:generated": "node scripts/generate.mjs --check",
     "screenshots": "nix develop path:./capture --command python3 scripts/capture.py",
     "screenshots:check": "python3 scripts/capture.py --check",
-    "screenshots:store": "nix develop path:./capture --command node scripts/store-previews.mjs",
+    "screenshots:store": "node scripts/store-previews.mjs",
     "palette:update": "node scripts/update-palette.mjs",
     "package": "node scripts/package.mjs"
   }
